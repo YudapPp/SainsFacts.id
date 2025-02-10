@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sains Menarik</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        h1 {
+            color: #007BFF;
+            font-size: 28px;
+        }
+        .fact {
+            font-size: 20px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fakta Sains Menarik</h1>
+        <p class="fact" id="fact">Klik tombol di bawah untuk mendapatkan fakta menarik!</p>
+        <button onclick="generateFact()">Dapatkan Fakta</button>
+    </div>
+    
+    <script>
+        const facts = [
+            "Air mendidih lebih cepat di dataran tinggi karena tekanan udara lebih rendah.",
+            "Satu sendok teh bintang neutron memiliki massa sekitar 6 miliar ton!",
+            "Jantung paus biru bisa seberat mobil kecil dan berdetak sangat lambat.",
+            "Planet Venus berputar lebih lambat dibandingkan ia mengorbit Matahari.",
+            "Tubuh manusia mengandung sekitar 37,2 triliun sel.",
+            "Cahaya dari Matahari membutuhkan sekitar 8 menit 20 detik untuk mencapai Bumi.",
+            "Terdapat lebih banyak bintang di alam semesta daripada butiran pasir di seluruh pantai di Bumi.",
+            "Hewan Turritopsis dohrnii dikenal sebagai ubur-ubur abadi karena dapat kembali ke tahap polip.",
+            "Gunung Everest bertambah tinggi sekitar 4 mm setiap tahun karena pergerakan tektonik.",
+            "Air dapat mendidih dan membeku pada saat yang sama di bawah kondisi tekanan tertentu.",
+            "Atom adalah 99,9999999% ruang kosong.",
+            "Gravitasi di Bulan hanya sekitar 1/6 dari gravitasi di Bumi.",
+            "Hujan di Venus berupa asam sulfat.",
+            "Terlalu banyak tidur juga dapat berbahaya bagi kesehatan.",
+            "Oksigen yang kita hirup sebagian besar berasal dari plankton di lautan.",
+            "Jika DNA manusia direntangkan, panjangnya bisa mencapai Pluto dan kembali.",
+            "Lautan menutupi sekitar 71% permukaan Bumi.",
+            "Suhu inti Matahari sekitar 15 juta derajat Celsius.",
+            "Ada lebih banyak mikroorganisme di tubuh manusia daripada jumlah selnya sendiri.",
+            "Satu hari di Merkurius lebih panjang daripada satu tahunnya.",
+            "Pisang adalah buah yang secara teknis termasuk dalam kategori beri.",
+            "Tubuh manusia dapat menghasilkan listrik yang cukup untuk menyalakan bohlam kecil.",
+            "Cacing tanah bisa memiliki lima hati.",
+            "Air di Bumi berusia lebih tua dari Matahari.",
+            "Ada jenis es yang lebih panas dari api karena tekanannya tinggi.",
+            "Tulang manusia lebih kuat dari baja dengan berat yang sama.",
+            "Bumi setiap tahun kehilangan sekitar 50.000 ton atmosfernya ke luar angkasa.",
+            "Satu sendok teh tanah Mars bisa cukup beracun untuk membunuh seseorang.",
+            "Kupu-kupu bisa mencium bau dengan kakinya.",
+            "Beberapa spesies ubur-ubur dapat mengkloning dirinya sendiri jika terpotong.",
+            "Ada lebih banyak galaksi di alam semesta yang dapat diamati daripada jumlah orang di Bumi.",
+            "Jika Anda menangis di luar angkasa, air mata Anda akan tetap di wajah Anda karena gravitasi nol.",
+            "Hewan beruang air (tardigrade) bisa bertahan dalam kondisi luar angkasa yang ekstrem.",
+            "Beberapa pohon bisa berkomunikasi satu sama lain melalui sistem akar bawah tanah.",
+            "Jerapah hanya tidur sekitar 30 menit sehari.",
+            "Madu adalah satu-satunya makanan yang tidak akan pernah basi.",
+            "Cairan logam merkuri bisa mengapung di atas air.",
+            "Bakteri bisa hidup di lingkungan yang sangat ekstrem, seperti kawah vulkanik dan dasar laut.",
+            "Otak manusia bisa menghasilkan cukup listrik untuk menyalakan bola lampu kecil.",
+            "Di Mars, matahari terbenam tampak biru.",
+            "Hiu lebih tua dari pohon dalam evolusi.",
+            "Bumi dulunya ungu sebelum memiliki vegetasi hijau.",
+            "Gurun Antartika adalah gurun terbesar di dunia.",
+            "Teleskop Hubble telah mengambil lebih dari 1,5 juta gambar alam semesta.",
+            "Terdapat lautan di bawah permukaan bulan Europa milik Jupiter.",
+            "Pelangi sebenarnya berbentuk lingkaran penuh, tetapi kita hanya melihat sebagian.",
+            "Laba-laba bisa terbang dengan memanfaatkan medan listrik atmosfer.",
+            "Ada gunung api aktif terbesar di Tata Surya di planet Mars bernama Olympus Mons."
+        ];
+        
+        function generateFact() {
+            const factElement = document.getElementById("fact");
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factElement.textContent = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
